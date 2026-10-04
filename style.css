@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --bg-primary: #070b14;
   --bg-secondary: #0c1424;
   --bg-card: rgba(14, 25, 45, 0.75);
@@ -730,3 +730,4 @@ body {
     grid-template-columns: 1fr;
   }
 }
+

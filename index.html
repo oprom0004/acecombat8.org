@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ace Combat 8 Aircraft Database & Wiki | AC8 Tech Tree & S-Rank Guide</title>
+  <meta name="description" content="The definitive Ace Combat 8: Wings of Theve technical database. Explore the interactive aircraft tech tree, top tier jet stats, SPW weapon specs, and S-Rank mission walkthroughs.">
+  <meta name="keywords" content="Ace Combat 8 aircraft database, AC8 tech tree, Ace Combat 8 plane stats, Ace Combat 8 S-Rank guide, ADF-11F Raven, F-22A Raptor AC8, Su-57 Felon">
+  <link rel="canonical" href="https://acecombat8.org/">
+  <link rel="alternate" hreflang="en" href="https://acecombat8.org/">
+  <link rel="alternate" hreflang="ja" href="https://acecombat8.org/ja/">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ace Combat 8 Aircraft Database & S-Rank Wiki">
+  <meta property="og:description" content="Interactive aircraft tech tree, performance stats, special weapons matrix, and tactical mission walkthroughs for Ace Combat 8.">
+  <meta property="og:image" content="https://acecombat8.org/images/hero.jpg">
+  <meta property="og:url" content="https://acecombat8.org/">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ace Combat 8 Aircraft Database & Wiki">
+  <meta name="twitter:description" content="Technical flight data, S-Rank requirements, and aircraft stats for Ace Combat 8: Wings of Theve.">
+  <meta name="twitter:image" content="https://acecombat8.org/images/hero.jpg">
+
+  <link rel="stylesheet" href="/style.css">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Ace Combat 8 Aircraft Database",
+    "url": "https://acecombat8.org/",
+    "description": "Non-profit tactical archive and technical database for Ace Combat 8: Wings of Theve.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://acecombat8.org/aircraft/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Site Navigation -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="/" class="brand-logo">
+        <span class="logo-badge">IUN-PKF // ARCHIVE</span>
+        ACE COMBAT 8 .ORG
+      </a>
+      <ul class="nav-links">
+        <li><a href="/" class="active">Database Home</a></li>
+        <li><a href="/aircraft/">Aircraft Tree</a></li>
+        <li><a href="/weapons/">Special Weapons</a></li>
+        <li><a href="/missions/">S-Rank Walkthrough</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://acecombat8game.com/play-online/" target="_blank" rel="noopener" class="btn-game-sim">
+          🚀 3D Dogfight Sim
+        </a>
+        <div class="lang-switch">
+          <a href="/" class="active">EN</a>
+          <a href="/ja/">JA</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Hero Section -->
+    <section class="hero-banner">
+      <div class="hero-content">
+        <div class="telemetry-tag">TAC-DATA VER 8.4 // USEA RECON COMMAND</div>
+        <h1>Ace Combat 8: Wings of Theve <span>Aircraft Database</span></h1>
+        <p>
+          Welcome to the authoritative flight encyclopedia for Ace Combat 8. Access comprehensive telemetry specs, SPW weapon payloads, aerodynamic performance charts, and verified S-Rank mission strategies.
+        </p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="num">42+</div>
+            <div class="label">Flyable Jets</div>
+          </div>
+          <div class="stat-item">
+            <div class="num">28</div>
+            <div class="label">Special Weapons</div>
+          </div>
+          <div class="stat-item">
+            <div class="num">20</div>
+            <div class="label">Campaign Missions</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="/images/aircraft-blueprint.jpg" alt="Ace Combat 8 Aircraft Blueprint Schematics" width="480" height="270">
+      </div>
+    </section>
+
+    <!-- Cross-Promo Synergy Banner -->
+    <div class="synergy-card">
+      <div class="synergy-text">
+        <h3>🎮 Test Fly These Jets in Real-Time 3D Dogfight Engine!</h3>
+        <p>Want to pilot the F-22A and Su-57 in your browser or explore HOTAS flight stick benchmarks? Visit our sister portal <strong>AceCombat8Game.com</strong>.</p>
+      </div>
+      <a href="https://acecombat8game.com/play-online/" target="_blank" rel="noopener" class="synergy-btn">
+        Launch Flight Simulator &rarr;
+      </a>
+    </div>
+
+    <!-- Interactive Jet Comparison Widget -->
+    <section class="compare-box">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Tactical Jet Comparison Matrix</h2>
+          <p class="section-desc">Select two aircraft to compare top speed, maneuverability, stability, and weapon hardpoints.</p>
+        </div>
+      </div>
+
+      <div class="compare-controls">
+        <select id="planeSelectA" class="compare-select" onchange="updateComparison()">
+          <option value="f22a" selected>F-22A Raptor (OADF 5th Gen Stealth)</option>
+          <option value="su57">Su-57 Felon (Erusea 5th Gen Flanker)</option>
+          <option value="adf11f">ADF-11F Raven (Grunder Drone Prototype)</option>
+          <option value="x02s">X-02S Strike Wyvern (Erusea Variable Geometry)</option>
+          <option value="f35c">F-35C Lightning II (Carrier Stealth Strike)</option>
+          <option value="typhoon">Eurofighter Typhoon (4.5th Gen Multi-Role)</option>
+        </select>
+        
+        <div class="compare-vs">VS</div>
+
+        <select id="planeSelectB" class="compare-select" onchange="updateComparison()">
+          <option value="f22a">F-22A Raptor (OADF 5th Gen Stealth)</option>
+          <option value="su57" selected>Su-57 Felon (Erusea 5th Gen Flanker)</option>
+          <option value="adf11f">ADF-11F Raven (Grunder Drone Prototype)</option>
+          <option value="x02s">X-02S Strike Wyvern (Erusea Variable Geometry)</option>
+          <option value="f35c">F-35C Lightning II (Carrier Stealth Strike)</option>
+          <option value="typhoon">Eurofighter Typhoon (4.5th Gen Multi-Role)</option>
+        </select>
+      </div>
+
+      <table class="compare-table" id="compareTable">
+        <thead>
+          <tr>
+            <th id="thNameA" style="width: 35%; color: var(--accent-cyan);">F-22A Raptor</th>
+            <th style="width: 30%;">Telemetry Metric</th>
+            <th id="thNameB" style="width: 35%; color: var(--accent-amber);">Su-57 Felon</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="speedA" class="val-win">Mach 2.50 (96)</td>
+            <td>Top Speed / Afterburner</td>
+            <td id="speedB">Mach 2.45 (94)</td>
+          </tr>
+          <tr>
+            <td id="mobA">92 / 100</td>
+            <td>Mobility / Pitch Rate</td>
+            <td id="mobB" class="val-win">98 / 100 (3D TVC)</td>
+          </tr>
+          <tr>
+            <td id="stabA" class="val-win">95 / 100</td>
+            <td>High-G Stability</td>
+            <td id="stabB">88 / 100</td>
+          </tr>
+          <tr>
+            <td id="stealthA" class="val-win">0.0001 m² (VLO)</td>
+            <td>RCS Stealth Rating</td>
+            <td id="stealthB">0.05 m² (Reduced)</td>
+          </tr>
+          <tr>
+            <td id="spwA">QAAM / 8AAM / XSDB</td>
+            <td>Special Weapon Pods</td>
+            <td id="spwB">PLSL / 4AAM / GPB</td>
+          </tr>
+          <tr>
+            <td id="costA">2,450,000 MRP</td>
+            <td>Tech Tree Cost</td>
+            <td id="costB">2,380,000 MRP</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Aircraft Tech Tree Grid Preview -->
+    <section>
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Top Tier Fighter Showcase</h2>
+          <p class="section-desc">Filter by combat role and browse tactical ratings.</p>
+        </div>
+        <a href="/aircraft/" class="btn-wiki" style="max-width: 180px;">View All 42+ Aircraft &rarr;</a>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterJets('all', this)">[ ALL AIRCRAFT ]</button>
+        <button class="filter-btn" onclick="filterJets('stealth', this)">STEALTH FIGHTERS</button>
+        <button class="filter-btn" onclick="filterJets('multirole', this)">MULTI-ROLE</button>
+        <button class="filter-btn" onclick="filterJets('prototype', this)">PROTOTYPE / SUPERPLANES</button>
+      </div>
+
+      <!-- Aircraft Grid -->
+      <div class="aircraft-grid" id="aircraftGrid">
+        
+        <!-- F-22A -->
+        <div class="aircraft-card" data-role="stealth">
+          <div class="card-top">
+            <div>
+              <div class="aircraft-name">F-22A Raptor</div>
+              <div class="aircraft-faction">OADF // Lockheed Martin</div>
+            </div>
+            <span class="role-badge role-stealth">Stealth Fighter</span>
+          </div>
+          <div class="stat-bars">
+            <div class="stat-row">
+              <span class="stat-label">Speed</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 96%;"></div></div>
+              <span class="stat-val">96</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Mobility</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 92%;"></div></div>
+              <span class="stat-val">92</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Air-to-Air</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 99%;"></div></div>
+              <span class="stat-val">99</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Air-to-Ground</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 78%;"></div></div>
+              <span class="stat-val">78</span>
+            </div>
+          </div>
+          <div class="weapons-row">
+            <span style="color: var(--text-muted); font-size: 0.8rem;">SPW LOADOUT:</span>
+            <div class="spw-tags">
+              <span class="spw-tag">QAAM</span>
+              <span class="spw-tag">8AAM</span>
+              <span class="spw-tag">XSDB</span>
+            </div>
+          </div>
+          <div class="card-action">
+            <a href="/aircraft/#f22a" class="btn-wiki">Telemetry Dossier</a>
+          </div>
+        </div>
+
+        <!-- Su-57 -->
+        <div class="aircraft-card" data-role="stealth">
+          <div class="card-top">
+            <div>
+              <div class="aircraft-name">Su-57 Felon</div>
+              <div class="aircraft-faction">Sukhoi // Erusean Air Force</div>
+            </div>
+            <span class="role-badge role-stealth">Stealth Fighter</span>
+          </div>
+          <div class="stat-bars">
+            <div class="stat-row">
+              <span class="stat-label">Speed</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 94%;"></div></div>
+              <span class="stat-val">94</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Mobility</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 98%;"></div></div>
+              <span class="stat-val">98</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Air-to-Air</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 95%;"></div></div>
+              <span class="stat-val">95</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Air-to-Ground</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 82%;"></div></div>
+              <span class="stat-val">82</span>
+            </div>
+          </div>
+          <div class="weapons-row">
+            <span style="color: var(--text-muted); font-size: 0.8rem;">SPW LOADOUT:</span>
+            <div class="spw-tags">
+              <span class="spw-tag">PLSL</span>
+              <span class="spw-tag">4AAM</span>
+              <span class="spw-tag">GPB</span>
+            </div>
+          </div>
+          <div class="card-action">
+            <a href="/aircraft/#su57" class="btn-wiki">Telemetry Dossier</a>
+          </div>
+        </div>
+
+        <!-- ADF-11F Raven -->
+        <div class="aircraft-card" data-role="prototype">
+          <div class="card-top">
+            <div>
+              <div class="aircraft-name">ADF-11F Raven</div>
+              <div class="aircraft-faction">Grunder Industries // Belkan Tech</div>
+            </div>
+            <span class="role-badge role-prototype">Superplane</span>
+          </div>
+          <div class="stat-bars">
+            <div class="stat-row">
+              <span class="stat-label">Speed</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 100%;"></div></div>
+              <span class="stat-val">100</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Mobility</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 99%;"></div></div>
+              <span class="stat-val">99</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Air-to-Air</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 100%;"></div></div>
+              <span class="stat-val">100</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Air-to-Ground</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 89%;"></div></div>
+              <span class="stat-val">89</span>
+            </div>
+          </div>
+          <div class="weapons-row">
+            <span style="color: var(--text-muted); font-size: 0.8rem;">SPW LOADOUT:</span>
+            <div class="spw-tags">
+              <span class="spw-tag">TLS</span>
+              <span class="spw-tag">QAAM</span>
+              <span class="spw-tag">WEAPON UAV</span>
+            </div>
+          </div>
+          <div class="card-action">
+            <a href="/aircraft/#adf11f" class="btn-wiki">Telemetry Dossier</a>
+          </div>
+        </div>
+
+        <!-- X-02S Strike Wyvern -->
+        <div class="aircraft-card" data-role="prototype">
+          <div class="card-top">
+            <div>
+              <div class="aircraft-name">X-02S Strike Wyvern</div>
+              <div class="aircraft-faction">EAS Mihaly Custom // Variable Wing</div>
+            </div>
+            <span class="role-badge role-prototype">Superplane</span>
+          </div>
+          <div class="stat-bars">
+            <div class="stat-row">
+              <span class="stat-label">Speed</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 98%;"></div></div>
+              <span class="stat-val">98</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Mobility</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 97%;"></div></div>
+              <span class="stat-val">97</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Air-to-Air</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 98%;"></div></div>
+              <span class="stat-val">98</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Air-to-Ground</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 92%;"></div></div>
+              <span class="stat-val">92</span>
+            </div>
+          </div>
+          <div class="weapons-row">
+            <span style="color: var(--text-muted); font-size: 0.8rem;">SPW LOADOUT:</span>
+            <div class="spw-tags">
+              <span class="spw-tag">EML Railgun</span>
+              <span class="spw-tag">4AAM</span>
+              <span class="spw-tag">LASM</span>
+            </div>
+          </div>
+          <div class="card-action">
+            <a href="/aircraft/#x02s" class="btn-wiki">Telemetry Dossier</a>
+          </div>
+        </div>
+
+        <!-- F-35C Lightning II -->
+        <div class="aircraft-card" data-role="multirole">
+          <div class="card-top">
+            <div>
+              <div class="aircraft-name">F-35C Lightning II</div>
+              <div class="aircraft-faction">OADF Carrier Wing // Lockheed</div>
+            </div>
+            <span class="role-badge role-multirole">Multi-Role</span>
+          </div>
+          <div class="stat-bars">
+            <div class="stat-row">
+              <span class="stat-label">Speed</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 86%;"></div></div>
+              <span class="stat-val">86</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Mobility</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 88%;"></div></div>
+              <span class="stat-val">88</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Air-to-Air</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 89%;"></div></div>
+              <span class="stat-val">89</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Air-to-Ground</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 95%;"></div></div>
+              <span class="stat-val">95</span>
+            </div>
+          </div>
+          <div class="weapons-row">
+            <span style="color: var(--text-muted); font-size: 0.8rem;">SPW LOADOUT:</span>
+            <div class="spw-tags">
+              <span class="spw-tag">SOD</span>
+              <span class="spw-tag">4AAM</span>
+              <span class="spw-tag">8AGM</span>
+            </div>
+          </div>
+          <div class="card-action">
+            <a href="/aircraft/#f35c" class="btn-wiki">Telemetry Dossier</a>
+          </div>
+        </div>
+
+        <!-- Typhoon -->
+        <div class="aircraft-card" data-role="multirole">
+          <div class="card-top">
+            <div>
+              <div class="aircraft-name">Eurofighter Typhoon</div>
+              <div class="aircraft-faction">Eurofighter Jagdflugzeug GmbH</div>
+            </div>
+            <span class="role-badge role-multirole">Multi-Role</span>
+          </div>
+          <div class="stat-bars">
+            <div class="stat-row">
+              <span class="stat-label">Speed</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 90%;"></div></div>
+              <span class="stat-val">90</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Mobility</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 94%;"></div></div>
+              <span class="stat-val">94</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Air-to-Air</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 91%;"></div></div>
+              <span class="stat-val">91</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">Air-to-Ground</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 87%;"></div></div>
+              <span class="stat-val">87</span>
+            </div>
+          </div>
+          <div class="weapons-row">
+            <span style="color: var(--text-muted); font-size: 0.8rem;">SPW LOADOUT:</span>
+            <div class="spw-tags">
+              <span class="spw-tag">HCAA</span>
+              <span class="spw-tag">8AAM</span>
+              <span class="spw-tag">LACMT</span>
+            </div>
+          </div>
+          <div class="card-action">
+            <a href="/aircraft/#typhoon" class="btn-wiki">Telemetry Dossier</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Campaign Mission S-Rank Thresholds Preview -->
+    <section>
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Mission S-Rank Intelligence Data</h2>
+          <p class="section-desc">Clear time limits, minimum target points, and Ace spawn conditions.</p>
+        </div>
+        <a href="/missions/" class="btn-wiki" style="max-width: 200px;">All Mission Briefings &rarr;</a>
+      </div>
+
+      <div class="data-table-container">
+        <table class="wiki-table">
+          <thead>
+            <tr>
+              <th>Mission #</th>
+              <th>Operation Codename</th>
+              <th>Primary Objectives</th>
+              <th>S-Rank Score Req</th>
+              <th>Time Limit</th>
+              <th>Named Ace Spawn</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>M-01</strong></td>
+              <td>Deer Horn</td>
+              <td>Airspace Interception & Erusean Bombers</td>
+              <td class="s-rank-score">11,200 pts</td>
+              <td>&lt; 05:30</td>
+              <td>MiG-21bis "PYRO" (Clear Wave 1 in &lt; 90s)</td>
+            </tr>
+            <tr>
+              <td><strong>M-04</strong></td>
+              <td>Rescue Operations</td>
+              <td>Radar Network Infiltration & Space Elevator</td>
+              <td class="s-rank-score">19,800 pts</td>
+              <td>&lt; 08:45</td>
+              <td>F-15C "RONIN" (Fly below 200m whole route)</td>
+            </tr>
+            <tr>
+              <td><strong>M-11</strong></td>
+              <td>Fleet Destruction</td>
+              <td>Snider's Tower & Aegis Fleet Strike</td>
+              <td class="s-rank-score">41,000 pts</td>
+              <td>&lt; 12:00</td>
+              <td>Su-33 "IBIS" (Fly through platform core)</td>
+            </tr>
+            <tr>
+              <td><strong>M-19</strong></td>
+              <td>Lighthouse Siege</td>
+              <td>Arsenal Bird "Justice" Destruction</td>
+              <td class="s-rank-score">58,000 pts</td>
+              <td>&lt; 15:00</td>
+              <td>Su-57 "CALAMITY" (Score &gt; 17k in Phase 1)</td>
+            </tr>
+            <tr>
+              <td><strong>M-20</strong></td>
+              <td>Dark Blue Horizon</td>
+              <td>ADF-11F Raven Dual Prototype Dogfight</td>
+              <td class="s-rank-score">32,500 pts</td>
+              <td>&lt; 07:30</td>
+              <td>ADFX-10 "MANTIS" (Fly under sea-bridge)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section>
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-desc">Community questions regarding Ace Combat 8 aircraft mechanics and tech tree progressions.</p>
+        </div>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h4>How do I unlock the ADF-11F Raven in the Tech Tree?</h4>
+          <p>The ADF-11F Raven requires purchasing the complete Belkan/Grunder tech branch (ADFX-01 and ADF-01 Falken) and accumulating 3,500,000 MRP after clearing Campaign Mission 20 on Hard difficulty or higher.</p>
+        </div>
+        <div class="faq-item">
+          <h4>What is the best Special Weapon for multiplayer dogfights?</h4>
+          <p>QAAM (Quick Air-to-Air Missile) remains the top choice for close-in high-G turn battles, while EML (Electromagnetic Railgun) provides instant 1-shot kills for pilots with pinpoint manual aim.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Does stealth rating prevent missile tracking?</h4>
+          <p>Stealth reduces enemy radar lock-on distance from 4,000m to 1,200m and breaks locks faster during cloud penetration, but does not alter missile homing once a missile is already tracking.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Can I practice dogfights without the full game?</h4>
+          <p>Yes! Check out our sister site <a href="https://acecombat8game.com/play-online/" target="_blank" rel="noopener" style="color: var(--accent-cyan);">AceCombat8Game.com/play-online/</a> to play a zero-install 3D tactical dogfight simulator right inside your desktop or mobile browser.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>ACE COMBAT 8 ARCHIVE</h4>
+        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.5rem;">
+          AceCombat8.org is an independent non-profit fan-maintained technical encyclopedia, telemetry archive, and walkthrough hub for the Ace Combat flight simulation community.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>QUICK DIRECTORY</h4>
+        <ul>
+          <li><a href="/aircraft/">Aircraft Specs Tree</a></li>
+          <li><a href="/weapons/">SPW Weapon Catalog</a></li>
+          <li><a href="/missions/">S-Rank Campaign Guides</a></li>
+          <li><a href="/ja/">日本語 (Japanese Wiki)</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>ECOSYSTEM</h4>
+        <ul>
+          <li><a href="https://acecombat8game.com/" target="_blank" rel="noopener">AceCombat8Game.com</a></li>
+          <li><a href="https://acecombat8game.com/play-online/" target="_blank" rel="noopener">3D Flight Simulator</a></li>
+          <li><a href="https://acecombat8game.com/hardware/" target="_blank" rel="noopener">HOTAS Stick Buying Guide</a></li>
+          <li><a href="https://acecombat8game.com/system-requirements/" target="_blank" rel="noopener">PC Specs & FPS Booster</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>LEGAL & DISCLAIMER</h4>
+        <p style="color: var(--text-muted); font-size: 0.75rem;">
+          Ace Combat is a registered trademark of BANDAI NAMCO Entertainment Inc. This site is not affiliated with or endorsed by Bandai Namco or Project Aces.
+        </p>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      &copy; 2026 AceCombat8.org Archive Network. All rights reserved. Open technical documentation under Fan Fair Use.
+    </div>
+  </footer>
+
+  <script>
+    const planeData = {
+      f22a: {
+        name: "F-22A Raptor",
+        speed: "Mach 2.50 (96)",
+        mob: "92 / 100",
+        stab: "95 / 100",
+        stealth: "0.0001 m² (VLO)",
+        spw: "QAAM / 8AAM / XSDB",
+        cost: "2,450,000 MRP",
+        win: ['speed', 'stab', 'stealth', 'cost']
+      },
+      su57: {
+        name: "Su-57 Felon",
+        speed: "Mach 2.45 (94)",
+        mob: "98 / 100 (3D TVC)",
+        stab: "88 / 100",
+        stealth: "0.05 m² (Reduced)",
+        spw: "PLSL / 4AAM / GPB",
+        cost: "2,380,000 MRP",
+        win: ['mob']
+      },
+      adf11f: {
+        name: "ADF-11F Raven",
+        speed: "Mach 2.85 (100)",
+        mob: "99 / 100",
+        stab: "97 / 100",
+        stealth: "0.005 m² (Internal)",
+        spw: "TLS / QAAM / UAV",
+        cost: "3,500,000 MRP",
+        win: ['speed', 'mob', 'stab']
+      },
+      x02s: {
+        name: "X-02S Strike Wyvern",
+        speed: "Mach 2.60 (98)",
+        mob: "97 / 100",
+        stab: "94 / 100",
+        stealth: "0.01 m² (Variable)",
+        spw: "EML / 4AAM / LASM",
+        cost: "2,800,000 MRP",
+        win: ['mob', 'speed']
+      },
+      f35c: {
+        name: "F-35C Lightning II",
+        speed: "Mach 2.10 (86)",
+        mob: "88 / 100",
+        stab: "92 / 100",
+        stealth: "0.0005 m² (VLO)",
+        spw: "SOD / 4AAM / 8AGM",
+        cost: "1,950,000 MRP",
+        win: ['cost']
+      },
+      typhoon: {
+        name: "Eurofighter Typhoon",
+        speed: "Mach 2.35 (90)",
+        mob: "94 / 100 (Canard)",
+        stab: "90 / 100",
+        stealth: "0.10 m² (Non-Stealth)",
+        spw: "HCAA / 8AAM / LACMT",
+        cost: "1,750,000 MRP",
+        win: ['cost']
+      }
+    };
+
+    function updateComparison() {
+      const aKey = document.getElementById('planeSelectA').value;
+      const bKey = document.getElementById('planeSelectB').value;
+      const a = planeData[aKey];
+      const b = planeData[bKey];
+
+      document.getElementById('thNameA').textContent = a.name;
+      document.getElementById('thNameB').textContent = b.name;
+
+      document.getElementById('speedA').textContent = a.speed;
+      document.getElementById('speedB').textContent = b.speed;
+      
+      document.getElementById('mobA').textContent = a.mob;
+      document.getElementById('mobB').textContent = b.mob;
+
+      document.getElementById('stabA').textContent = a.stab;
+      document.getElementById('stabB').textContent = b.stab;
+
+      document.getElementById('stealthA').textContent = a.stealth;
+      document.getElementById('stealthB').textContent = b.stealth;
+
+      document.getElementById('spwA').textContent = a.spw;
+      document.getElementById('spwB').textContent = b.spw;
+
+      document.getElementById('costA').textContent = a.cost;
+      document.getElementById('costB').textContent = b.cost;
+    }
+
+    function filterJets(role, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.aircraft-card');
+      cards.forEach(card => {
+        if (role === 'all' || card.getAttribute('data-role') === role) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

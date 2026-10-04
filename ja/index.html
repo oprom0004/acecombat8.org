@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>エースコンバット8 機体データベース & 攻略Wiki | AC8 機体ツリー・Sランク攻略</title>
+  <meta name="description" content="『エースコンバット8 (Ace Combat 8)』非公式総合機体データベース＆攻略アーカイブ。全42機以上の詳細スペック、機体ツリー比較、特殊兵装 (SPW)、全ミッションSランク獲得条件・ネームド機出現条件を完全網羅。">
+  <meta name="keywords" content="エースコンバット8, AC8 攻略, エスコン8 機体一覧, AC8 機体ツリー, Sランク 攻略, ADF-11F Raven, F-22A Raptor">
+  <link rel="canonical" href="https://acecombat8.org/ja/">
+  <link rel="alternate" hreflang="en" href="https://acecombat8.org/">
+  <link rel="alternate" hreflang="ja" href="https://acecombat8.org/ja/">
+  
+  <meta property="og:title" content="エースコンバット8 機体データベース & Sランク攻略Wiki">
+  <meta property="og:description" content="全機体スペック、特殊兵装データ、全ミッションSランク獲得条件を完全網羅。">
+  <meta property="og:image" content="https://acecombat8.org/images/hero.jpg">
+  <meta property="og:url" content="https://acecombat8.org/ja/">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="/ja/" class="brand-logo">
+        <span class="logo-badge">IUN-PKF // ARCHIVE</span>
+        ACE COMBAT 8 .ORG
+      </a>
+      <ul class="nav-links">
+        <li><a href="/ja/" class="active">DBトップ</a></li>
+        <li><a href="/ja/aircraft/">機体ツリー</a></li>
+        <li><a href="/weapons/">特殊兵装 (SPW)</a></li>
+        <li><a href="/ja/missions/">Sランク攻略</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="https://acecombat8game.com/ja/play-online/" target="_blank" rel="noopener" class="btn-game-sim">
+          🚀 3Dドッグファイト
+        </a>
+        <div class="lang-switch">
+          <a href="/">EN</a>
+          <a href="/ja/" class="active">JA</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="hero-banner">
+      <div class="hero-content">
+        <div class="telemetry-tag">TAC-DATA VER 8.4 // 統合航空軍戦術記録室</div>
+        <h1>エースコンバット8 <span>総合機体データベース</span></h1>
+        <p>
+          『エースコンバット8』に登場する全プレイアブル機体の詳細性能値、機動性・ステルス性・特殊兵装（SPW）マトリックス、およびキャンペーン全20ミッションのSランク取得基準・ネームド機（エース機）の出現トリガーを網羅した非営利データアーカイブです。
+        </p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="num">42機+</div>
+            <div class="label">搭乗可能機体</div>
+          </div>
+          <div class="stat-item">
+            <div class="num">28種</div>
+            <div class="label">特殊兵装</div>
+          </div>
+          <div class="stat-item">
+            <div class="num">20作戦</div>
+            <div class="label">キャンペーン</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="/images/aircraft-blueprint.jpg" alt="エースコンバット8 機体ブループリント設計図" width="480" height="270">
+      </div>
+    </section>
+
+    <!-- Cross-Promo Synergy Banner -->
+    <div class="synergy-card">
+      <div class="synergy-text">
+        <h3>🎮 ブラウザで動く3Dドッグファイト＆HOTASフライトスティック比較！</h3>
+        <p>実機さながらの3D空中戦をブラウザですぐにテスト飛行できます。フライトスティック推奨ガイドは <strong>AceCombat8Game.com</strong> で公開中。</p>
+      </div>
+      <a href="https://acecombat8game.com/ja/play-online/" target="_blank" rel="noopener" class="synergy-btn">
+        フライトシミュレーター起動 &rarr;
+      </a>
+    </div>
+
+    <!-- Interactive Jet Comparison Widget -->
+    <section class="compare-box">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">機体性能 リアルタイム比較マトリックス</h2>
+          <p class="section-desc">2機の戦闘機を選択して、最高速度・旋回機動性・安定性・ステルスRCSを比較します。</p>
+        </div>
+      </div>
+
+      <div class="compare-controls">
+        <select id="planeSelectA" class="compare-select" onchange="updateComparison()">
+          <option value="f22a" selected>F-22A ラプター (オーシア空軍 第5世代ステルス)</option>
+          <option value="su57">Su-57 フェロン (エルジア空軍 推力偏向第5世代)</option>
+          <option value="adf11f">ADF-11F レーヴン (グランダー試作無人機)</option>
+          <option value="x02s">X-02S ストライクワイバーン (可変翼架空機)</option>
+          <option value="f35c">F-35C ライトニングII (艦載ステルス攻撃機)</option>
+          <option value="typhoon">ユーロファイター タイフーン (第4.5世代マルチロール)</option>
+        </select>
+        
+        <div class="compare-vs">VS</div>
+
+        <select id="planeSelectB" class="compare-select" onchange="updateComparison()">
+          <option value="f22a">F-22A ラプター (オーシア空軍 第5世代ステルス)</option>
+          <option value="su57" selected>Su-57 フェロン (エルジア空軍 推力偏向第5世代)</option>
+          <option value="adf11f">ADF-11F レーヴン (グランダー試作無人機)</option>
+          <option value="x02s">X-02S ストライクワイバーン (可変翼架空機)</option>
+          <option value="f35c">F-35C ライトニングII (艦載ステルス攻撃機)</option>
+          <option value="typhoon">ユーロファイター タイフーン (第4.5世代マルチロール)</option>
+        </select>
+      </div>
+
+      <table class="compare-table" id="compareTable">
+        <thead>
+          <tr>
+            <th id="thNameA" style="width: 35%; color: var(--accent-cyan);">F-22A ラプター</th>
+            <th style="width: 30%;">性能項目 (Metric)</th>
+            <th id="thNameB" style="width: 35%; color: var(--accent-amber);">Su-57 フェロン</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="speedA" class="val-win">Mach 2.50 (96)</td>
+            <td>最高速度 / AB加速</td>
+            <td id="speedB">Mach 2.45 (94)</td>
+          </tr>
+          <tr>
+            <td id="mobA">92 / 100</td>
+            <td>機動性 / ピッチレート</td>
+            <td id="mobB" class="val-win">98 / 100 (3D TVC)</td>
+          </tr>
+          <tr>
+            <td id="stabA" class="val-win">95 / 100</td>
+            <td>High-G 安定性</td>
+            <td id="stabB">88 / 100</td>
+          </tr>
+          <tr>
+            <td id="stealthA" class="val-win">0.0001 m² (極小)</td>
+            <td>レーダー反射断面積 (RCS)</td>
+            <td id="stealthB">0.05 m² (低減)</td>
+          </tr>
+          <tr>
+            <td id="spwA">QAAM / 8AAM / XSDB</td>
+            <td>搭載特殊兵装 (SPW)</td>
+            <td id="spwB">PLSL / 4AAM / GPB</td>
+          </tr>
+          <tr>
+            <td id="costA">2,450,000 MRP</td>
+            <td>ツリー開発費 (MRP)</td>
+            <td id="costB">2,380,000 MRP</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Aircraft Tech Tree Grid Preview -->
+    <section>
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">主力戦闘機 性能一覧</h2>
+          <p class="section-desc">作戦目的に応じたカテゴリー別フィルター。</p>
+        </div>
+        <a href="/ja/aircraft/" class="btn-wiki" style="max-width: 180px;">全42機を見る &rarr;</a>
+      </div>
+
+      <div class="aircraft-grid">
+        <!-- F-22A -->
+        <div class="aircraft-card">
+          <div class="card-top">
+            <div>
+              <div class="aircraft-name">F-22A Raptor</div>
+              <div class="aircraft-faction">OADF // ロッキード・マーティン</div>
+            </div>
+            <span class="role-badge role-stealth">ステルス制空戦闘機</span>
+          </div>
+          <div class="stat-bars">
+            <div class="stat-row">
+              <span class="stat-label">速度</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 96%;"></div></div>
+              <span class="stat-val">96</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">機動性</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 92%;"></div></div>
+              <span class="stat-val">92</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">対空能力</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 99%;"></div></div>
+              <span class="stat-val">99</span>
+            </div>
+          </div>
+          <div class="weapons-row">
+            <span style="color: var(--text-muted); font-size: 0.8rem;">特殊兵装:</span>
+            <div class="spw-tags">
+              <span class="spw-tag">QAAM</span>
+              <span class="spw-tag">8AAM</span>
+              <span class="spw-tag">XSDB</span>
+            </div>
+          </div>
+          <div class="card-action">
+            <a href="/ja/aircraft/#f22a" class="btn-wiki">機体詳細データ</a>
+          </div>
+        </div>
+
+        <!-- Su-57 -->
+        <div class="aircraft-card">
+          <div class="card-top">
+            <div>
+              <div class="aircraft-name">Su-57 Felon</div>
+              <div class="aircraft-faction">スホーイ // エルジア空軍</div>
+            </div>
+            <span class="role-badge role-stealth">ステルス戦闘機</span>
+          </div>
+          <div class="stat-bars">
+            <div class="stat-row">
+              <span class="stat-label">速度</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 94%;"></div></div>
+              <span class="stat-val">94</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">機動性</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 98%;"></div></div>
+              <span class="stat-val">98</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">対空能力</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 95%;"></div></div>
+              <span class="stat-val">95</span>
+            </div>
+          </div>
+          <div class="weapons-row">
+            <span style="color: var(--text-muted); font-size: 0.8rem;">特殊兵装:</span>
+            <div class="spw-tags">
+              <span class="spw-tag">PLSL</span>
+              <span class="spw-tag">4AAM</span>
+              <span class="spw-tag">GPB</span>
+            </div>
+          </div>
+          <div class="card-action">
+            <a href="/ja/aircraft/#su57" class="btn-wiki">機体詳細データ</a>
+          </div>
+        </div>
+
+        <!-- ADF-11F -->
+        <div class="aircraft-card">
+          <div class="card-top">
+            <div>
+              <div class="aircraft-name">ADF-11F Raven</div>
+              <div class="aircraft-faction">グランダー・インダストリー // ベルカ技術</div>
+            </div>
+            <span class="role-badge role-prototype">最先端架空機</span>
+          </div>
+          <div class="stat-bars">
+            <div class="stat-row">
+              <span class="stat-label">速度</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 100%;"></div></div>
+              <span class="stat-val">100</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">機動性</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 99%;"></div></div>
+              <span class="stat-val">99</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">対空能力</span>
+              <div class="stat-meter"><div class="stat-fill" style="width: 100%;"></div></div>
+              <span class="stat-val">100</span>
+            </div>
+          </div>
+          <div class="weapons-row">
+            <span style="color: var(--text-muted); font-size: 0.8rem;">特殊兵装:</span>
+            <div class="spw-tags">
+              <span class="spw-tag">TLS</span>
+              <span class="spw-tag">QAAM</span>
+              <span class="spw-tag">WEAPON UAV</span>
+            </div>
+          </div>
+          <div class="card-action">
+            <a href="/ja/aircraft/#adf11f" class="btn-wiki">機体詳細データ</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Briefing Table -->
+    <section>
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Sランク攻略データ速報</h2>
+          <p class="section-desc">クリア基準タイム、必要撃破スコア、ネームド機（エース機）の出現トリガー。</p>
+        </div>
+        <a href="/ja/missions/" class="btn-wiki" style="max-width: 200px;">全ミッション攻略へ &rarr;</a>
+      </div>
+
+      <div class="data-table-container">
+        <table class="wiki-table">
+          <thead>
+            <tr>
+              <th>ミッション</th>
+              <th>作戦名</th>
+              <th>目標内容</th>
+              <th>Sランク基準スコア</th>
+              <th>目標タイム</th>
+              <th>ネームド機出現条件</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>M-01</strong></td>
+              <td>Deer Horn</td>
+              <td>領空侵犯機の迎撃・Tu-95爆撃機排除</td>
+              <td class="s-rank-score">11,200 pts</td>
+              <td>05:30以内</td>
+              <td>MiG-21bis "PYRO" (第3波を90秒以内に全撃破)</td>
+            </tr>
+            <tr>
+              <td><strong>M-04</strong></td>
+              <td>Rescue</td>
+              <td>レーダー網強行突破・軌道エレベーター</td>
+              <td class="s-rank-score">19,800 pts</td>
+              <td>08:45以内</td>
+              <td>F-15C "RONIN" (進入ルートを高度200m以下で飛行)</td>
+            </tr>
+            <tr>
+              <td><strong>M-11</strong></td>
+              <td>Fleet Destruction</td>
+              <td>スナイダーズタワー＆イージス艦隊殲滅</td>
+              <td class="s-rank-score">41,000 pts</td>
+              <td>12:00以内</td>
+              <td>Su-33 "IBIS" (中央プラットフォームの主柱間を潜航通過)</td>
+            </tr>
+            <tr>
+              <td><strong>M-19</strong></td>
+              <td>Lighthouse</td>
+              <td>アーセナルバード『ジャスティス』撃沈戦</td>
+              <td class="s-rank-score">58,000 pts</td>
+              <td>15:00以内</td>
+              <td>Su-57 "CALAMITY" (第1フェーズ開始5分以内に17,000点突破)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>ACE COMBAT 8 ARCHIVE</h4>
+        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.5rem;">
+          エースコンバット8 攻略データベース (AceCombat8.org) は、ファン有志による非公式オープンアーカイブです。
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>ナビゲーション</h4>
+        <ul>
+          <li><a href="/ja/aircraft/">機体ツリー一覧</a></li>
+          <li><a href="/weapons/">特殊兵装カタログ</a></li>
+          <li><a href="/ja/missions/">Sランク攻略Wiki</a></li>
+          <li><a href="/">English Version</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>関連ポータル</h4>
+        <ul>
+          <li><a href="https://acecombat8game.com/ja/" target="_blank" rel="noopener">AceCombat8Game.com (総合)</a></li>
+          <li><a href="https://acecombat8game.com/ja/play-online/" target="_blank" rel="noopener">3Dフライトシミュレーター</a></li>
+          <li><a href="https://acecombat8game.com/hardware/" target="_blank" rel="noopener">フライトスティック推奨比較</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>権利表記</h4>
+        <p style="color: var(--text-muted); font-size: 0.75rem;">
+          『ACE COMBAT』は株式会社バンダイナムコエンターテインメントの登録商標です。
+        </p>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      &copy; 2026 AceCombat8.org Archive Network.
+    </div>
+  </footer>
+
+  <script>
+    const planeData = {
+      f22a: {
+        name: "F-22A ラプター",
+        speed: "Mach 2.50 (96)",
+        mob: "92 / 100",
+        stab: "95 / 100",
+        stealth: "0.0001 m² (極小)",
+        spw: "QAAM / 8AAM / XSDB",
+        cost: "2,450,000 MRP"
+      },
+      su57: {
+        name: "Su-57 フェロン",
+        speed: "Mach 2.45 (94)",
+        mob: "98 / 100 (3D TVC)",
+        stab: "88 / 100",
+        stealth: "0.05 m² (低減)",
+        spw: "PLSL / 4AAM / GPB",
+        cost: "2,380,000 MRP"
+      },
+      adf11f: {
+        name: "ADF-11F レーヴン",
+        speed: "Mach 2.85 (100)",
+        mob: "99 / 100",
+        stab: "97 / 100",
+        stealth: "0.005 m² (機内格納)",
+        spw: "TLS / QAAM / UAV",
+        cost: "3,500,000 MRP"
+      },
+      x02s: {
+        name: "X-02S ストライクワイバーン",
+        speed: "Mach 2.60 (98)",
+        mob: "97 / 100",
+        stab: "94 / 100",
+        stealth: "0.01 m² (可変翼)",
+        spw: "EML / 4AAM / LASM",
+        cost: "2,800,000 MRP"
+      },
+      f35c: {
+        name: "F-35C ライトニングII",
+        speed: "Mach 2.10 (86)",
+        mob: "88 / 100",
+        stab: "92 / 100",
+        stealth: "0.0005 m² (極小)",
+        spw: "SOD / 4AAM / 8AGM",
+        cost: "1,950,000 MRP"
+      },
+      typhoon: {
+        name: "ユーロファイター タイフーン",
+        speed: "Mach 2.35 (90)",
+        mob: "94 / 100 (カナード)",
+        stab: "90 / 100",
+        stealth: "0.10 m² (通常)",
+        spw: "HCAA / 8AAM / LACMT",
+        cost: "1,750,000 MRP"
+      }
+    };
+
+    function updateComparison() {
+      const aKey = document.getElementById('planeSelectA').value;
+      const bKey = document.getElementById('planeSelectB').value;
+      const a = planeData[aKey];
+      const b = planeData[bKey];
+
+      document.getElementById('thNameA').textContent = a.name;
+      document.getElementById('thNameB').textContent = b.name;
+
+      document.getElementById('speedA').textContent = a.speed;
+      document.getElementById('speedB').textContent = b.speed;
+      
+      document.getElementById('mobA').textContent = a.mob;
+      document.getElementById('mobB').textContent = b.mob;
+
+      document.getElementById('stabA').textContent = a.stab;
+      document.getElementById('stabB').textContent = b.stab;
+
+      document.getElementById('stealthA').textContent = a.stealth;
+      document.getElementById('stealthB').textContent = b.stealth;
+
+      document.getElementById('spwA').textContent = a.spw;
+      document.getElementById('spwB').textContent = b.spw;
+
+      document.getElementById('costA').textContent = a.cost;
+      document.getElementById('costB').textContent = b.cost;
+    }
+  </script>
+</body>
+</html>

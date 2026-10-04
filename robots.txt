@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://acecombat8.org/sitemap.xml

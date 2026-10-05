@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --bg-primary: #070b14;
   --bg-secondary: #0c1424;
   --bg-card: rgba(14, 25, 45, 0.75);
@@ -730,4 +730,21 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+.page-visual-banner {
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7);
+}
+
+.page-visual-banner img {
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
 
